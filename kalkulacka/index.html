@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KALKULACKA</title>
+</head>
+
+<style>
+    .tlacidlo {
+        display: flex;
+        justify-content: center;
+        background-color: orange;
+        padding: 40px;
+        border-radius: 20px;
+        margin-bottom: 20px;
+        margin-left: 905px;
+    }
+
+    .num1-num2 {
+        display: flex;
+        justify-content: center;
+        margin-top: 100px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .number1 {
+        margin-right: 20px;
+    }
+    
+    .vysledok {
+        display: flex;
+        justify-content: center;
+    }
+</style>
+
+<body>
+
+<div class="num1-num2">
+<input type="number" id="num1" class="number1">
+<input type="number" id="num2" class="number2">
+</div>
+
+<p id="result" class="vysledok"></p>
+
+<div class="button">    
+<button class="tlacidlo" onclick="scitanie()">+</button>
+<button class="tlacidlo" onclick="odcitanie()">-</button>
+<button class="tlacidlo" onclick="nasobenie()">*</button>
+<button class="tlacidlo" onclick="delenie()">/</button>
+</div>
+
+</body>
+
+<script>
+    // tlacidla
+
+    //scitanie
+    function scitanie() {
+    const number1 = document.getElementById("num1").value;
+    const number2 = document.getElementById("num2").value;
+    let result = document.getElementById("result");
+    let vysledok;
+    vysledok = parseFloat(number1) + parseFloat(number2);
+    result.innerHTML = vysledok;
+    }
+    
+    //odctanie
+    function odcitanie() {
+    const number1 = document.getElementById("num1").value;
+    const number2 = document.getElementById("num2").value;
+    let result = document.getElementById("result");
+    let vysledok;
+    vysledok = parseFloat(number1) - parseFloat(number2);
+    result.innerHTML = vysledok;
+    }
+
+    //nasobenie
+    function nasobenie() {
+    const number1 = document.getElementById("num1").value;
+    const number2 = document.getElementById("num2").value;
+    let result = document.getElementById("result");
+    let vysledok;
+    vysledok = parseFloat(number1) * parseFloat(number2);
+    result.innerHTML = vysledok;
+    }
+
+    //delenie
+    function delenie() {
+    const number1 = document.getElementById("num1").value;
+    const number2 = document.getElementById("num2").value;
+    let result = document.getElementById("result");
+    let vysledok;
+    vysledok = parseFloat(number1) / parseFloat(number2);
+    result.innerHTML = vysledok;
+    }
+    
+</script>
+</html>
